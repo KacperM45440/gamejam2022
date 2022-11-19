@@ -133,11 +133,7 @@ public class GameController : MonoBehaviour
         int skokWarunek = Random.Range(12, 17);
         while (lives > 0)
         {
-<<<<<<< HEAD
             gameSpeed += 0.01f;
-=======
-            gameSpeed += 0.001f;
->>>>>>> 500b9cd5df8cb5fbd0d598cda305f063bfacb9c4
             skokCounter++;
             if (skokCounter >= skokWarunek)
             {
