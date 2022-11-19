@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class GameController : MonoBehaviour
 {
@@ -126,10 +128,20 @@ public class GameController : MonoBehaviour
     
     IEnumerator PumpUpTheJam()
     {
+        int skokCounter = 0;
+        System.Random rnd = new System.Random();
+        int skokWarunek = rnd.Next(12, 17);
         while (lives > 0)
         {
             gameSpeed += 0.001f;
+            skokCounter++;
             yield return new WaitForSeconds(1f);
+            if (skokCounter >= skokWarunek)
+            {
+                CarJump();
+                skokCounter = 0;
+                skokWarunek = rnd.Next(12, 17);
+            }
         }
     }
     void Update()
