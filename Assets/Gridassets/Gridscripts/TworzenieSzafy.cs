@@ -24,6 +24,7 @@ namespace Zyrafa
                 {
                     GameObject newKomorka = Instantiate(komorkaPrefab, transform);
                     SzafaKomorka komorka = newKomorka.GetComponent<SzafaKomorka>();
+
                     siatka[x, y] = komorka;
                     Debug.Log(newKomorka.name);
                     komorka.Initialize(this, x, y);

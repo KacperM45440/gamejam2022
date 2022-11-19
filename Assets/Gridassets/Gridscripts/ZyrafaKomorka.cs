@@ -23,8 +23,8 @@ namespace Zyrafa
 
         public void Initialize(Zyrafa zyrafa, Miejsce pozycja, SzafaKomorka szafaKomorka)
         {
-            _ikona.sprite = _ikonaSprite;
-            _tlo.sprite = _tloSprite;
+            //_ikona.sprite = _ikonaSprite;
+            //_tlo.sprite = _tloSprite;
             _pozycja = pozycja;
 
             _szafaKomorka = szafaKomorka;
