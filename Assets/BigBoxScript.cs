@@ -8,9 +8,10 @@ public class BigBoxScript : MonoBehaviour
     public List<GiraffeScript> giraffes = new List<GiraffeScript>();
 
     private bool finished = false;
+    private Animator animatorRef;
     void Start()
     {
-        
+        animatorRef = GetComponent<Animator>();
     }
 
     void Update()
@@ -34,17 +35,16 @@ public class BigBoxScript : MonoBehaviour
                 }
                 finished = true;
                 GameController.Instance.BoxCompleted();
-                StartCoroutine(BecomeBox());
+                animatorRef.SetTrigger("Close");
             }
         }
     }
 
     IEnumerator BecomeBox()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.01f);
         GameObject newBox = Instantiate(boxPrefab);
         newBox.transform.position = transform.position;
-        yield return new WaitForSeconds(0.01f);
         Destroy(gameObject);
     }
 }

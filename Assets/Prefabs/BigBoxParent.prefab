@@ -113,6 +113,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Big Box
       objectReference: {fileID: 0}
+    - target: {fileID: 3990114689047334710, guid: 6f043b1ace8304f43a420e008a5d45f8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5220492899551581742, guid: 6f043b1ace8304f43a420e008a5d45f8, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
