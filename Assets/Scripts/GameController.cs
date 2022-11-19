@@ -22,9 +22,10 @@ public class GameController : MonoBehaviour
 
     public int lives = 3;
 
+    public Animator carAnimRef;
+
     void Start()
     {
-        
     }
 
     public void StartGame()
@@ -40,6 +41,12 @@ public class GameController : MonoBehaviour
     {
         lives--;
         Debug.Log("Lives left" + lives);
+    }
+
+    [ContextMenu("Jump")]
+    public void CarJump()
+    {
+        carAnimRef.SetTrigger("Jump");
     }
 
     void Update()
