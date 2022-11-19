@@ -15,6 +15,7 @@ public class BoxScript : MonoBehaviour
     private float gravity = 1;
     private Vector2 lastHeldPos;
     private Vector2 mousePos;
+    private bool alive = true;
     void Start()
     {
         rbRef = GetComponent<Rigidbody2D>();
@@ -36,7 +37,10 @@ public class BoxScript : MonoBehaviour
 
     public void OnMouseUp()
     {
-        DropBox();
+        if (alive)
+        {
+            DropBox();
+        }
     }
 
     public void DropBox()
@@ -62,11 +66,14 @@ public class BoxScript : MonoBehaviour
         }
     }
 
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if(isHeld && collision.gameObject.CompareTag("Dropzone"))
-    //    {
-    //        DropBox();
-    //    }
-    //}
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Dropzone") && alive)
+        {
+            DropBox();
+            alive = false;
+            pushForce = pushForce * 5;
+            GameController.Instance.LoseLife();
+        }
+    }
 }
