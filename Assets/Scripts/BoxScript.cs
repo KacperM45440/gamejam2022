@@ -22,10 +22,8 @@ public class BoxScript : MonoBehaviour
         gravity = rbRef.gravityScale;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
     }
 
     public void OnMouseDown()
@@ -55,11 +53,20 @@ public class BoxScript : MonoBehaviour
         {
             lastHeldPos = mousePos;
             mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            transform.position = mousePos;
+            rbRef.MovePosition(mousePos);
+            //transform.position = mousePos;
         }
         else if (startDriving && pushForce > 0)
         {
             rbRef.AddForce((Vector2.left * pushForce + rbRef.velocity ) * Time.deltaTime, ForceMode2D.Force);
         }
     }
+
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if(isHeld && collision.gameObject.CompareTag("Dropzone"))
+    //    {
+    //        DropBox();
+    //    }
+    //}
 }
