@@ -7,6 +7,7 @@ public class GiraffeScript : MonoBehaviour
     public bool isHeld = false;
     public bool isInsideBox = false;
     public bool isColliding = false;
+    public float rotateSpeed = 50f;
 
     private SpriteRenderer rendererRef;
 
@@ -37,6 +38,14 @@ public class GiraffeScript : MonoBehaviour
         {
             mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             transform.position = mousePos;
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                transform.Rotate(0, 0, -rotateSpeed);
+            }
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                transform.Rotate(0, 0, rotateSpeed);
+            }
         }
         if(collisions.Count > 0)
         {
