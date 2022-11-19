@@ -27,14 +27,6 @@ public class Buttons : MonoBehaviour
     }
     public void NewQuitButton()
     {
-        SceneManager.LoadScene(clickQuit);
-
-    }
-
-    public void Exit()
-    {
         Application.Quit();
     }
-
-
 }
