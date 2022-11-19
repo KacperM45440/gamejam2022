@@ -48,6 +48,15 @@ public class GameController : MonoBehaviour
     {
         lives--;
         Debug.Log("Lives left" + lives);
+        if(lives <= 0)
+        {
+            LoseGame();
+        }
+    }
+
+    public void LoseGame()
+    {
+        Debug.Log("You lost");
     }
 
     [ContextMenu("Jump")]

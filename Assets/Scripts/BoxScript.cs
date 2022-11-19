@@ -69,8 +69,11 @@ public class BoxScript : MonoBehaviour
     public void DeleteBox()
     {
         DropBox();
+        if (alive)
+        {
+            GameController.Instance.LoseLife();
+        }
         alive = false;
-        GameController.Instance.LoseLife();
         Destroy(gameObject);
     }
 
