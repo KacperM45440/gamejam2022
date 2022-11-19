@@ -134,7 +134,6 @@ public class GameController : MonoBehaviour
         while (lives > 0)
         {
             gameSpeed += 0.001f;
-            Debug.Log(skokCounter);
             skokCounter++;
             if (skokCounter >= skokWarunek)
             {
