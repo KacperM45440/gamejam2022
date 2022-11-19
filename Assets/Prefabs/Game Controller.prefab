@@ -45,5 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 3
+  points: 0
   carAnimRef: {fileID: 0}
+  bigBoxPrefabs:
+  - {fileID: 7056942740158732164, guid: 4f623a83cff52df4f8bcddd4ed78a8e4, type: 3}
   gameSpeed: 0

@@ -26,7 +26,7 @@ public class GameController : MonoBehaviour
     public int points = 0;
 
     public Animator carAnimRef;
-    public GameObject bigBoxPrefab;
+    public List<GameObject> bigBoxPrefabs = new List<GameObject>();
     public float gameSpeed = 0;
 
     private BoxScript[] boxes;
@@ -51,7 +51,8 @@ public class GameController : MonoBehaviour
     public void BoxAppear()
     {
         Debug.Log("tworze pudlo");
-        GameObject newBigBox = Instantiate(bigBoxPrefab);
+        int i = Random.Range(0, bigBoxPrefabs.Count);
+        GameObject newBigBox = Instantiate(bigBoxPrefabs[i]);
         newBigBox.transform.position = new Vector2(0, 1f);
     }
 
@@ -63,7 +64,7 @@ public class GameController : MonoBehaviour
 
     IEnumerator NewBigBox()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(3f);
         BoxAppear();
     }
 
@@ -129,18 +130,16 @@ public class GameController : MonoBehaviour
     IEnumerator PumpUpTheJam()
     {
         int skokCounter = 0;
-        System.Random rnd = new();
-        int skokWarunek = rnd.Next(12, 17);
+        int skokWarunek = Random.Range(12, 17);
         while (lives > 0)
         {
-            gameSpeed += 0.001f;
-            Debug.Log(skokCounter);
+            gameSpeed += 0.01f;
             skokCounter++;
             if (skokCounter >= skokWarunek)
             {
                 CarJump();
                 skokCounter = 0;
-                skokWarunek = rnd.Next(12, 17);
+                skokWarunek = Random.Range(12, 17);
             }
             yield return new WaitForSeconds(1f);
         }

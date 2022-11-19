@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7552359848952128715}
   - component: {fileID: 5851851561499581274}
   - component: {fileID: 7028473208771537159}
+  - component: {fileID: 141426357801247148}
   m_Layer: 6
   m_Name: Giraffe B
   m_TagString: Giraffe
@@ -98,6 +99,26 @@ MonoBehaviour:
   isInsideBox: 0
   isColliding: 0
   rotateSpeed: 15
+--- !u!95 &141426357801247148
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5851851561499581269}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5d7c0985dc013c7439137cb53debd650, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5851851562115083239
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,12 +192,12 @@ SpriteRenderer:
   m_SortingLayerID: -1300481493
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 945083b1a997a0a4b940c24699cdf1e7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 20a0f9e9a7be4f148822dcc60918af02, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4, y: 4}
+  m_Size: {x: 7.2, y: 7.3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
