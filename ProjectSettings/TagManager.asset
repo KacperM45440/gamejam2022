@@ -7,6 +7,8 @@ TagManager:
   - Box
   - Car
   - Dropzone
+  - BoxInside
+  - BoxSide
   layers:
   - Default
   - TransparentFX
