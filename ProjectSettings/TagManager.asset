@@ -9,6 +9,7 @@ TagManager:
   - Dropzone
   - BoxInside
   - BoxSide
+  - Giraffe
   layers:
   - Default
   - TransparentFX
@@ -45,4 +46,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Big Box
+    uniqueID: 2994485803
     locked: 0
