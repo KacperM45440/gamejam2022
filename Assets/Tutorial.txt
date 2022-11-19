@@ -1,0 +1,10 @@
+Jak grać?
+
+Twoim zadaniem jest schować żyrafy do szafy, jednocześnie nie dopuszczając do tego aby pudełka wiezione przez samochód z niego wypadły.
+Żyrafy nie mogą się dotykać, jak i wychodzić poza granicę szafy. Im szybciej skompletujesz zestaw żyraf, tym więcej punktów otrzymujesz.
+Pudełka które wypadły z auta mogą zostać podniesione z ziemii i z powrotem do niego załadowane.
+Pudełka które przepadną odbierają ci zdrowie. Kiedy stracisz 3 punkty zdrowia, przegrywasz.
+
+Sterowanie
+Kliknij i przeciągnij elementy na ekranie aby nimi przesuwać.
+Naciśnij Q lub E aby obrócić trzymaną w ręku żyrafę.
