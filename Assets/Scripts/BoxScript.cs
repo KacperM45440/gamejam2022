@@ -60,6 +60,10 @@ public class BoxScript : MonoBehaviour
             mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             rbRef.MovePosition(mousePos);
             //transform.position = mousePos;
+            if (Vector2.Distance(transform.position, mousePos) > 1f)
+            {
+                DropBox();
+            }
         }
         else if (startDriving)
         {

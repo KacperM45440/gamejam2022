@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1691829167608073536}
   - component: {fileID: 1691829167608073537}
   - component: {fileID: 1691829167608073538}
+  - component: {fileID: 8888864485058049358}
   m_Layer: 0
   m_Name: Car Colliders
   m_TagString: Car
@@ -41,13 +42,13 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1691829167608073548}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 6200000, guid: ee27595afb01be2489a4e98d0eaa5248, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -3.09}
+  m_Offset: {x: -0.55, y: -2.67}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -58,7 +59,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.2, y: 0.72}
+  m_Size: {x: 6.55, y: 0.99}
   m_EdgeRadius: 0
 --- !u!61 &1691829167608073537
 BoxCollider2D:
@@ -67,13 +68,13 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1691829167608073548}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 6200000, guid: ee27595afb01be2489a4e98d0eaa5248, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.04}
+  m_Offset: {x: -1.1, y: 0.69}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -84,7 +85,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.2, y: 0.72}
+  m_Size: {x: 5.57, y: 0.32}
   m_EdgeRadius: 0
 --- !u!61 &1691829167608073538
 BoxCollider2D:
@@ -93,7 +94,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1691829167608073548}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 6200000, guid: ee27595afb01be2489a4e98d0eaa5248, type: 2}
   m_IsTrigger: 0
@@ -112,6 +113,50 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.52, y: 4.03}
   m_EdgeRadius: 0
+--- !u!68 &8888864485058049358
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1691829167608073548}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 1.775564, y: 0.63476217}
+  - {x: 1.6173571, y: 0.7653413}
+  - {x: -1.8803842, y: 0.9508164}
+  - {x: -3.8115616, y: 0.87695503}
+  - {x: -3.8300917, y: 0.6397443}
+  - {x: -2.336062, y: 0.7175224}
+  - {x: -0.13665056, y: 0.6510881}
+  - {x: 1.317485, y: 0.5062194}
+  - {x: 1.5474217, y: 0.27490234}
+  - {x: 1.4841254, y: -2.0492938}
+  - {x: 1.204718, y: -2.2428873}
+  - {x: -3.7750676, y: -2.224626}
+  - {x: -3.8213897, y: -3.1084552}
+  - {x: -3.2457542, y: -3.123596}
+  - {x: -3.114167, y: -3.878198}
+  - {x: 3.0209272, y: -4.040881}
+  - {x: 2.9752965, y: -3.435536}
+  - {x: 3.001495, y: -3.141119}
+  - {x: 3.8643546, y: -3.1326227}
+  - {x: 3.7452064, y: -1.3612977}
+  - {x: 3.1139925, y: -1.0990685}
+  - {x: 2.6403708, y: -0.28245997}
+  - {x: 1.8423425, y: -0.19724548}
+  - {x: 1.7575482, y: 0.5629028}
+  m_AdjacentStartPoint: {x: 1.47, y: 0.84}
+  m_AdjacentEndPoint: {x: 1.47, y: 0.79}
+  m_UseAdjacentStartPoint: 1
+  m_UseAdjacentEndPoint: 1
 --- !u!1 &1691829167928222772
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,7 +237,7 @@ Transform:
   m_GameObject: {fileID: 1691829168577312513}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.51, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1691829167928222794}
@@ -239,8 +284,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 20a0f9e9a7be4f148822dcc60918af02, type: 3}
-  m_Color: {r: 0.21698111, g: 0.21698111, b: 0.21698111, a: 0.65882355}
+  m_Sprite: {fileID: 21300000, guid: d5fe0b6a31349c84da031a871f9be8b3, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
