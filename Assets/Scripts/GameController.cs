@@ -92,7 +92,7 @@ public class GameController : MonoBehaviour
     {
         carAnimRef.SetBool("Driving", true);
         StartCoroutine(StartDriving());
-        PumpUpTheJam();
+        StartCoroutine(PumpUpTheJam());
     }
 
     IEnumerator StartDriving()
@@ -129,19 +129,20 @@ public class GameController : MonoBehaviour
     IEnumerator PumpUpTheJam()
     {
         int skokCounter = 0;
-        System.Random rnd = new System.Random();
+        System.Random rnd = new();
         int skokWarunek = rnd.Next(12, 17);
         while (lives > 0)
         {
             gameSpeed += 0.001f;
+            Debug.Log(skokCounter);
             skokCounter++;
-            yield return new WaitForSeconds(1f);
             if (skokCounter >= skokWarunek)
             {
                 CarJump();
                 skokCounter = 0;
                 skokWarunek = rnd.Next(12, 17);
             }
+            yield return new WaitForSeconds(1f);
         }
     }
     void Update()
