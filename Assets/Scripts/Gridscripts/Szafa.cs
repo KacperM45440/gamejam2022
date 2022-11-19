@@ -5,7 +5,7 @@ using System.ComponentModel;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Oxygenist
+namespace Zyrafa
 {
     public partial class Szafa : MonoBehaviour
     {

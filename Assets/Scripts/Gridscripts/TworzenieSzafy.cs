@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Oxygenist
+namespace Zyrafa
 {
     public partial class Szafa : MonoBehaviour
     {

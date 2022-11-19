@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Oxygenist
+namespace Zyrafa
 {
     public class SzafaKomorka : MonoBehaviour
     {

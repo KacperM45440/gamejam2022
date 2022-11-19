@@ -4,16 +4,18 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace Oxygenist
+namespace Zyrafa
 {
     public class ZyrafaKomorka : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
     {
-        [SerializeField]
         private Image _tlo;
-        
         [SerializeField]
-        private Image _ikona;
+        private Sprite _tloSprite;
         
+        private Image _ikona;
+        [SerializeField]
+        private Sprite _ikonaSprite;
+
         private GameObject przeciagany;
         private SzafaKomorka _szafaKomorka;
         private Miejsce _pozycja;
@@ -21,7 +23,8 @@ namespace Oxygenist
 
         public void Initialize(Zyrafa zyrafa, Miejsce pozycja, SzafaKomorka szafaKomorka)
         {
-            _ikona.sprite = zyrafa.obrazek;
+            _ikona.sprite = _ikonaSprite;
+            _tlo.sprite = _tloSprite;
             _pozycja = pozycja;
 
             _szafaKomorka = szafaKomorka;

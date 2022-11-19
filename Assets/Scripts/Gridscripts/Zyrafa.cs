@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Oxygenist
+namespace Zyrafa
 {
     [CreateAssetMenu(menuName = "Create New Item")]
     public class Zyrafa : ScriptableObject
