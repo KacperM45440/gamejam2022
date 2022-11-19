@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7552359848952128715}
   - component: {fileID: 5851851561499581274}
   - component: {fileID: 7028473208771537159}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Giraffe B
   m_TagString: Giraffe
   m_Icon: {fileID: 0}
@@ -43,14 +43,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5851851561499581269}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -97,6 +97,7 @@ MonoBehaviour:
   isHeld: 0
   isInsideBox: 0
   isColliding: 0
+  rotateSpeed: 15
 --- !u!1 &5851851562115083239
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,7 +108,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5851851562115083236}
   - component: {fileID: 5851851562115083237}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Giraffe Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

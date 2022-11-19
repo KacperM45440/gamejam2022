@@ -29,10 +29,12 @@ public class BoxScript : MonoBehaviour
 
     public void OnMouseDown()
     {
-        isHeld = true;
-        rbRef.gravityScale = 0;
-        rbRef.velocity = Vector2.zero;
-        Debug.Log(name + "Game Object Click in Progress");
+        if (alive)
+        {
+            isHeld = true;
+            rbRef.gravityScale = 0;
+            rbRef.velocity = Vector2.zero;
+        }
     }
 
     public void OnMouseUp()
@@ -48,7 +50,6 @@ public class BoxScript : MonoBehaviour
         isHeld = false;
         rbRef.gravityScale = gravity;
         rbRef.AddForce((mousePos - lastHeldPos) * throwForce, ForceMode2D.Force);
-        Debug.Log(name + "No longer being clicked");
     }
 
     private void FixedUpdate()

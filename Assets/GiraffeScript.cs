@@ -11,6 +11,7 @@ public class GiraffeScript : MonoBehaviour
 
     private SpriteRenderer rendererRef;
 
+    private bool pickable = true;
     private List<Collider2D> collisions = new List<Collider2D>();
     private Vector2 mousePos;
     void Start()
@@ -20,16 +21,23 @@ public class GiraffeScript : MonoBehaviour
 
     public void OnMouseDown()
     {
-        isHeld = true;
-        transform.parent = null;
-        isInsideBox = false;
-        isColliding = false;
-        Debug.Log(name + "Game Object Click in Progress");
+        if (pickable)
+        {
+            isHeld = true;
+            transform.parent = null;
+            isInsideBox = false;
+            isColliding = false;
+        }
     }
 
     public void OnMouseUp()
     {
         isHeld = false;
+    }
+
+    public void MakeUnpickable()
+    {
+        pickable = false;
     }
 
     void Update()
@@ -49,7 +57,6 @@ public class GiraffeScript : MonoBehaviour
         }
         if(collisions.Count > 0)
         {
-            Debug.Log(collisions.Count);
             isColliding = true;
         }
         else
@@ -80,6 +87,10 @@ public class GiraffeScript : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
+        if (collision.gameObject.CompareTag("BoxInside"))
+        {
+            isInsideBox = true;
+        }
         if ((collision.gameObject.CompareTag("BoxInside") || collision.gameObject.CompareTag("BoxSide")) && !isHeld)
         {
             transform.parent = collision.gameObject.transform;
