@@ -24,10 +24,9 @@ namespace Zyrafa
 
         public void DodajZyrafe(Zyrafa zyrafa)
         {
-            GameObject newZyrafa = Instantiate(NowaZyrafa, transform);
-           // SzafaKomorka komorka = newZyrafa.GetComponent<SzafaKomorka>();
-            //GameObject nowaZyrafa = Resources.Load($"ItemCell{zyrafa.Szerokosc}x{zyrafa.Wysokosc}") as GameObject;
-            ZyrafaKomorka _zyrafaKomorka = Instantiate(newZyrafa, _szafa.transform).GetComponent<ZyrafaKomorka>();
+           GameObject newZyrafa = Instantiate(NowaZyrafa, transform);
+           SzafaKomorka komorka = newZyrafa.GetComponent<SzafaKomorka>();
+            ZyrafaKomorka _zyrafaKomorka = Instantiate(nowaZyrafa, _szafa.transform).GetComponent<ZyrafaKomorka>();
             _zyrafaKomorka.Initialize(zyrafa, miejsceWSzafie, this);
             _zyrafaKomorka.transform.position = transform.position;
         }

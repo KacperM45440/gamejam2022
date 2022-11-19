@@ -93,7 +93,7 @@ MonoBehaviour:
   miejsceWSzafie:
     posiadanyX: 0
     posiadanyY: 0
-  nowaZyrafa: {fileID: 2469812328245248789, guid: b312d04a1f96e464daa7ff7ac6a564a9, type: 3}
+  NowaZyrafa: {fileID: 2469812328245248789, guid: b312d04a1f96e464daa7ff7ac6a564a9, type: 3}
 --- !u!114 &-1698596408900226223
 MonoBehaviour:
   m_ObjectHideFlags: 0
