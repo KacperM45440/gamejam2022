@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rbRef: {fileID: 0}
-  startDriving: 1
+  startDriving: 0
   pushForce: 5000
   throwForce: 5000
   isHeld: 0

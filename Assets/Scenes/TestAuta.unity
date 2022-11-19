@@ -462,6 +462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 3
+  carAnimRef: {fileID: 1738256064}
 --- !u!4 &1408163371
 Transform:
   m_ObjectHideFlags: 0
@@ -521,8 +522,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1738256063}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.04369647, w: 0.9990449}
+  m_LocalPosition: {x: -0.10823472, y: 0.10963981, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -530,7 +531,7 @@ Transform:
   - {fileID: 1937147848}
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 5.009}
 --- !u!1 &1858240030
 GameObject:
   m_ObjectHideFlags: 0

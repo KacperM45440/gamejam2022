@@ -60,10 +60,18 @@ public class BoxScript : MonoBehaviour
             rbRef.MovePosition(mousePos);
             //transform.position = mousePos;
         }
-        else if (startDriving && pushForce > 0)
+        else if (startDriving)
         {
-            rbRef.AddForce((Vector2.left * pushForce + rbRef.velocity ) * Time.deltaTime, ForceMode2D.Force);
+            rbRef.AddForce((Vector2.left * pushForce * GameController.Instance.gameSpeed + rbRef.velocity ) * Time.deltaTime, ForceMode2D.Force);
         }
+    }
+
+    public void DeleteBox()
+    {
+        DropBox();
+        alive = false;
+        GameController.Instance.LoseLife();
+        Destroy(gameObject);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
