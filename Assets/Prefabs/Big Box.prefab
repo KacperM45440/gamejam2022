@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6986203916341622099}
   - component: {fileID: 378321091090443338}
   - component: {fileID: 6497757462048955207}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Big Box Colliders
   m_TagString: BoxSide
   m_Icon: {fileID: 0}
@@ -148,7 +148,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1431686012025756056}
-  m_Layer: 0
+  - component: {fileID: 230263182911271845}
+  m_Layer: 6
   m_Name: Big Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,14 +164,29 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3042700116488980839}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.37, y: 3.65, z: 2.2808597}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.98, y: 1.98, z: 1.98}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5220492899551581742}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &230263182911271845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3042700116488980839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03f8ff6201f416949a135138d2c0cbe3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0.1
+  boxPrefab: {fileID: 3980916793997902762, guid: e855e746947b0a7479356ea88d78a577, type: 3}
+  giraffes: []
 --- !u!1 &3990114689047334710
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,7 +197,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8282188119916714828}
   - component: {fileID: 1760023241684202068}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Big Box Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,8 +212,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3990114689047334710}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.362, y: -0.301, z: 0}
-  m_LocalScale: {x: 0.11, y: 0.11, z: 0.11}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.14, y: 0.14, z: 0.14}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5220492899551581742}
@@ -265,7 +281,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5220492899551581742}
   - component: {fileID: 3341647657102295203}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Big Box Inside
   m_TagString: BoxInside
   m_Icon: {fileID: 0}

@@ -21,9 +21,10 @@ public class GameController : MonoBehaviour
     }
 
     public int lives = 3;
+    public int points = 0;
 
     public Animator carAnimRef;
-
+    public GameObject bigBoxPrefab;
     public float gameSpeed = 0;
 
     private BoxScript[] boxes;
@@ -42,6 +43,26 @@ public class GameController : MonoBehaviour
             box.startDriving = true;
         }
         gameSpeed = 1;
+        BoxAppear();
+    }
+
+    public void BoxAppear()
+    {
+        Debug.Log("tworze pudlo");
+        GameObject newBigBox = Instantiate(bigBoxPrefab);
+        newBigBox.transform.position = new Vector2(0, 1f);
+    }
+
+    public void BoxCompleted()
+    {
+        points++;
+        StartCoroutine(NewBigBox());
+    }
+
+    IEnumerator NewBigBox()
+    {
+        yield return new WaitForSeconds(2f);
+        BoxAppear();
     }
 
     public void LoseLife()
