@@ -69,6 +69,7 @@ public class GameController : MonoBehaviour
     {
         carAnimRef.SetBool("Driving", true);
         StartCoroutine(StartDriving());
+        PumpUpTheJam();
     }
 
     IEnumerator StartDriving()
@@ -101,7 +102,15 @@ public class GameController : MonoBehaviour
             yield return null;
         }
     }
-
+    
+    IEnumerator PumpUpTheJam()
+    {
+        while (lives > 0)
+        {
+            gameSpeed += 0.001f;
+            yield return new WaitForSeconds(1f);
+        }
+    }
     void Update()
     {
         if (carAnimRef.GetBool("Driving"))
