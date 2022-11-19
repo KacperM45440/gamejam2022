@@ -60,8 +60,11 @@ public class GameController : MonoBehaviour
 
     public void BoxCompleted()
     {
-        points++;
-        StartCoroutine(NewBigBox());
+        if(lives > 0)
+        {
+            points++;
+            StartCoroutine(NewBigBox());
+        }
     }
 
     IEnumerator NewBigBox()
@@ -82,6 +85,7 @@ public class GameController : MonoBehaviour
 
     public void LoseGame()
     {
+        CarStop();
         Debug.Log("You lost");
     }
 

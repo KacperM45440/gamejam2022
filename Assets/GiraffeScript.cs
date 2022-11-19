@@ -28,11 +28,6 @@ public class GiraffeScript : MonoBehaviour
             isInsideBox = false;
             isColliding = false;
         }
-
-        //KTORES Z TYCH, TRZEBA BEDZIE POOBRACAC I SPRAWDZIC
-        Debug.Log(transform.eulerAngles.x);
-        Debug.Log(transform.eulerAngles.y);
-        Debug.Log(transform.eulerAngles.z);
     }
 
     public void OnMouseUp()
