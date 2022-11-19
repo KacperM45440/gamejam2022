@@ -33,6 +33,8 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
+        //TYMCZASOWO
+        StartGame();
     }
 
     [ContextMenu("StartGame")]

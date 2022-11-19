@@ -307,7 +307,6 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
-  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -323,18 +322,6 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
---- !u!114 &519420030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -658,9 +645,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1726911196}
-        m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
-        m_MethodName: NewQuitButton
+      - m_Target: {fileID: 983152267}
+        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
+        m_MethodName: ExitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -668,6 +655,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1164159787}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Close
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &712690869
@@ -888,7 +887,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 805672576}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1164159787}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Close
+          m_BoolArgument: 0
+        m_CallState: 0
+      - m_Target: {fileID: 983152267}
+        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
+        m_MethodName: GoPlay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &805672576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1052,9 +1075,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1726911196}
-        m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
-        m_MethodName: NewAutorsButton
+      - m_Target: {fileID: 983152267}
+        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
+        m_MethodName: GoToAuthors
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1062,6 +1085,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1164159787}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Close
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &910193998
@@ -1189,6 +1224,7 @@ GameObject:
   - component: {fileID: 983152266}
   - component: {fileID: 983152265}
   - component: {fileID: 983152264}
+  - component: {fileID: 983152267}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1246,6 +1282,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &983152267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983152263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1205b082d9c23cb41840573eb9dbcd2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &990344254
 GameObject:
   m_ObjectHideFlags: 0
@@ -1354,10 +1402,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3885440341282348894, guid: 7ff196a01819e434abcff90ac93ada9e, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: fda34a21c0aa45c46943c957a8101199, type: 3}
     - target: {fileID: 3885440342399131596, guid: 7ff196a01819e434abcff90ac93ada9e, type: 3}
       propertyPath: m_Name
       value: KurtynaParent
@@ -1367,20 +1411,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3885440342399131597, guid: 7ff196a01819e434abcff90ac93ada9e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 3885440342399131597, guid: 7ff196a01819e434abcff90ac93ada9e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 3885440342399131597, guid: 7ff196a01819e434abcff90ac93ada9e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 424.7105
+      value: 17.08
       objectReference: {fileID: 0}
     - target: {fileID: 3885440342399131597, guid: 7ff196a01819e434abcff90ac93ada9e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 405.95013
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3885440342399131597, guid: 7ff196a01819e434abcff90ac93ada9e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1414,12 +1450,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3885440343087545806, guid: 7ff196a01819e434abcff90ac93ada9e, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: fda34a21c0aa45c46943c957a8101199, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ff196a01819e434abcff90ac93ada9e, type: 3}
+--- !u!95 &1164159787 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3885440342969586614, guid: 7ff196a01819e434abcff90ac93ada9e, type: 3}
+  m_PrefabInstance: {fileID: 1164159786}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1249753514
 GameObject:
   m_ObjectHideFlags: 0

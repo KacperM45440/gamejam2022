@@ -70,6 +70,7 @@ public class GiraffeScript : MonoBehaviour
         }
         if (isColliding && isInsideBox)
         {
+            Debug.Log("red");
             rendererRef.color = Color.red;
         }
         else
