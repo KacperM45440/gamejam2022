@@ -912,6 +912,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1726911196}
+        m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
+        m_MethodName: NewPlayButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &805672576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1551,7 +1563,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3885440342399131597, guid: 7ff196a01819e434abcff90ac93ada9e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.08
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 3885440342399131597, guid: 7ff196a01819e434abcff90ac93ada9e, type: 3}
       propertyPath: m_LocalPosition.y
