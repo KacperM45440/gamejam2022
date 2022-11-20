@@ -293,8 +293,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -12, y: -407}
-  m_SizeDelta: {x: 783.42, y: 521.23}
+  m_AnchoredPosition: {x: -17, y: -437}
+  m_SizeDelta: {x: 783.42, y: 559.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &81045207
 MonoBehaviour:
@@ -316,9 +316,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Pakuj \u017Cyrafy do skrzynek tak aby wszystkie si\u0119 zmie\u015Bci\u0142y\n\n\nZbierz
-    8 skrzynek by przej\u015B\u0107 do nast\u0119pnego pozimu\n\n\nUwaga!\nZgubisz
-    3 skrzynki- Przegrywasz"
+  m_text: "Pakuj \u017Cyrafy do skrzynek tak aby wszystkie si\u0119 zmie\u015Bci\u0142y\nU\u017Cywaj
+    Q i E by obraca\u0107 \u017Cyrafami\n\nZbierz 8 skrzynek by przej\u015B\u0107
+    do nast\u0119pnego pozimu\n\nUwaga!\nZgubisz 3 skrzynki- Przegrywasz"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a83931c4a16e37c49b88dcb77b6f581f, type: 2}
   m_sharedMaterial: {fileID: 1495507639517409321, guid: a83931c4a16e37c49b88dcb77b6f581f, type: 2}
@@ -345,8 +345,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 48.4
-  m_fontSizeBase: 48.4
+  m_fontSize: 46.9
+  m_fontSizeBase: 46.9
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -355,9 +355,9 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 1
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 16
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -1302,8 +1302,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -443.53, y: -373}
-  m_SizeDelta: {x: 887.06, y: 235.68}
+  m_AnchoredPosition: {x: -443.53, y: -405}
+  m_SizeDelta: {x: 887.06, y: 232.46}
   m_Pivot: {x: 0.5, y: 0.15088804}
 --- !u!114 &869020386
 MonoBehaviour:
@@ -2159,8 +2159,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -443.53, y: 117.84}
-  m_SizeDelta: {x: 887.06, y: 235.68}
+  m_AnchoredPosition: {x: -443.53, y: 85.7}
+  m_SizeDelta: {x: 887.06, y: 299.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1359744463
 MonoBehaviour:
@@ -2840,8 +2840,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -443.53, y: -93}
-  m_SizeDelta: {x: 887.06, y: 235.68}
+  m_AnchoredPosition: {x: -448.76, y: -140.94}
+  m_SizeDelta: {x: 876.59, y: 231.81}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1884285753
 MonoBehaviour:
