@@ -624,7 +624,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &874646740
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1482,7 +1482,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5869278941620915292, guid: f54eb9b1450e5c44b87a16e71b4b7533, type: 3}
       propertyPath: bigBoxPrefabs.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5869278941620915292, guid: f54eb9b1450e5c44b87a16e71b4b7533, type: 3}
       propertyPath: bigBoxPrefabs.Array.data[1]
@@ -1496,6 +1496,10 @@ PrefabInstance:
       propertyPath: bigBoxPrefabs.Array.data[3]
       value: 
       objectReference: {fileID: 7056942740158732164, guid: 1bab0408003faa54a9e442cb31a2bcc5, type: 3}
+    - target: {fileID: 5869278941620915292, guid: f54eb9b1450e5c44b87a16e71b4b7533, type: 3}
+      propertyPath: bigBoxPrefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 7056942740158732164, guid: 87ace94e7d205de4d906b275d7037b8f, type: 3}
     - target: {fileID: 5869278941620915293, guid: f54eb9b1450e5c44b87a16e71b4b7533, type: 3}
       propertyPath: m_RootOrder
       value: 6

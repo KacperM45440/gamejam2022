@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2813699801078784318
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5851851561499581269, guid: 84ca8cc6ff6b76d4ea2b1fcac8d9c5b4, type: 3}
+      propertyPath: m_Name
+      value: Giraffe 4 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5851851561499581275, guid: 84ca8cc6ff6b76d4ea2b1fcac8d9c5b4, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5851851561499581275, guid: 84ca8cc6ff6b76d4ea2b1fcac8d9c5b4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -15.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 5851851561499581275, guid: 84ca8cc6ff6b76d4ea2b1fcac8d9c5b4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5851851561499581275, guid: 84ca8cc6ff6b76d4ea2b1fcac8d9c5b4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.2808597
+      objectReference: {fileID: 0}
+    - target: {fileID: 5851851561499581275, guid: 84ca8cc6ff6b76d4ea2b1fcac8d9c5b4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5851851561499581275, guid: 84ca8cc6ff6b76d4ea2b1fcac8d9c5b4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5851851561499581275, guid: 84ca8cc6ff6b76d4ea2b1fcac8d9c5b4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5851851561499581275, guid: 84ca8cc6ff6b76d4ea2b1fcac8d9c5b4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5851851561499581275, guid: 84ca8cc6ff6b76d4ea2b1fcac8d9c5b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5851851561499581275, guid: 84ca8cc6ff6b76d4ea2b1fcac8d9c5b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5851851561499581275, guid: 84ca8cc6ff6b76d4ea2b1fcac8d9c5b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5851851562115083237, guid: 84ca8cc6ff6b76d4ea2b1fcac8d9c5b4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f6576ae3535e3cc4fbfff4c135770963, type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 84ca8cc6ff6b76d4ea2b1fcac8d9c5b4, type: 3}
+--- !u!1 &8519041321092790891 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5851851561499581269, guid: 84ca8cc6ff6b76d4ea2b1fcac8d9c5b4, type: 3}
+  m_PrefabInstance: {fileID: 2813699801078784318}
+  m_PrefabAsset: {fileID: 0}
+--- !u!60 &8659182485953520037
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8519041321092790891}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.0302896, y: 0.93081176}
+      - {x: 0.88643837, y: 1.3561393}
+      - {x: 0.37982368, y: 1.4399632}
+      - {x: -0.18097591, y: 1.3729212}
+      - {x: -0.3056612, y: 1.028967}
+      - {x: -0.23459244, y: -0.27125865}
+      - {x: -0.018201828, y: -0.44088602}
+      - {x: -0.13851452, y: -0.56231254}
+      - {x: -0.5160265, y: -0.7244004}
+      - {x: -0.74054813, y: -0.6154303}
+      - {x: -1.0058985, y: -0.7932943}
+      - {x: -1.0374846, y: -1.0832239}
+      - {x: -0.8796787, y: -1.4228994}
+      - {x: 0.98877907, y: -1.3717276}
+      - {x: 1.0028048, y: -1.1463567}
+      - {x: 0.94973814, y: -0.7432073}
+      - {x: 0.79802513, y: -0.32542408}
+      - {x: 0.93460464, y: 0.18288201}
