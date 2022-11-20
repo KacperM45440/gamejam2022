@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -105,6 +106,10 @@ public class GameController : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
         carAnimRef.SetTrigger("DriveOff");
+        yield return new WaitForSeconds(5f);
+        KurtynaController.Instance.CloseCurtains();
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(3);
     }
 
     IEnumerator NewBigBox()
