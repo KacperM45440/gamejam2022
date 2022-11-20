@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Buttons : MonoBehaviour
 {
     [SerializeField] private string clickPlay = "Play";
-    [SerializeField] private string clickQuit = "Quit";
+    //[SerializeField] private string clickQuit = "Quit";
     [SerializeField] private string clickAutors = "Autorzy";
     [SerializeField] private string clickBack = "Menu";
 

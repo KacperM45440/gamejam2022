@@ -220,7 +220,7 @@ public class GameController : MonoBehaviour
         int skokWarunek = Random.Range(12, 17) - (difficulty * 5);
         while (lives > 0 && points < howManyPointsToWin)
         {
-            gameSpeed += 0.008f + (0.004f * difficulty);
+            gameSpeed += 0.005f + (0.004f * difficulty);
             skokCounter++;
             if (skokCounter >= skokWarunek)
             {
@@ -233,6 +233,7 @@ public class GameController : MonoBehaviour
     }
     void Update()
     {
+        Debug.Log("Game speed is: " + gameSpeed);
         if (carAnimRef.GetBool("Driving") && points < howManyPointsToWin)
         {
             carAnimRef.speed = gameSpeed;
