@@ -9,12 +9,13 @@ public class MenuController : MonoBehaviour
     public AudioClip menuClick;
 
     public TextMeshProUGUI recordText;
+    public bool mainMenu = false;
     private AudioSource audioRef;
 
     void Start()
     {
         audioRef = GetComponent<AudioSource>();
-        if (PlayerPrefs.HasKey("Speed"))
+        if (PlayerPrefs.HasKey("Speed") && mainMenu)
         {
             recordText.text = "Rekordowa predkosc: " + PlayerPrefs.GetFloat("Speed") + " km/h";
         }

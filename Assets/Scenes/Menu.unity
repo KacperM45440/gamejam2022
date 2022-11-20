@@ -1494,6 +1494,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuClick: {fileID: 0}
   recordText: {fileID: 224751158}
+  mainMenu: 1
 --- !u!82 &983152268
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2326,9 +2327,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 128af0bb12cdf5945b37953a876143c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickPlay: Play
-  clickAutors: Autorzy
-  clickBack: Menu
 --- !u!4 &1726911197
 Transform:
   m_ObjectHideFlags: 0
