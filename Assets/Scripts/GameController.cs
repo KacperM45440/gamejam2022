@@ -26,6 +26,7 @@ public class GameController : MonoBehaviour
     public int points = 3;
     public int howManyPointsToWin = 8;
     public int difficulty = 0;
+    public Vector2 boxStartPos;
 
     public Animator carAnimRef;
     public List<GameObject> bigBoxPrefabs = new List<GameObject>();
@@ -63,10 +64,13 @@ public class GameController : MonoBehaviour
 
     public void BoxAppear()
     {
-        Debug.Log("tworze pudlo");
-        int i = Random.Range(0, bigBoxPrefabs.Count);
-        GameObject newBigBox = Instantiate(bigBoxPrefabs[i]);
-        newBigBox.transform.position = new Vector2(0, 1f);
+        if(lives > 0)
+        {
+            Debug.Log("tworze pudlo");
+            int i = Random.Range(0, bigBoxPrefabs.Count);
+            GameObject newBigBox = Instantiate(bigBoxPrefabs[i]);
+            newBigBox.transform.position = boxStartPos;
+        }
     }
 
     public void BoxCompleted()
@@ -87,8 +91,8 @@ public class GameController : MonoBehaviour
 
     public void WinLevel()
     {
-        StartCoroutine(DriveOff());
         StartCoroutine(StopDriving());
+        StartCoroutine(DriveOff());
     }
 
     IEnumerator DriveOff()
@@ -105,7 +109,7 @@ public class GameController : MonoBehaviour
 
     public void LoseLife()
     {
-        if(points < howManyPointsToWin)
+        if(points < howManyPointsToWin && points >= 0)
         {
             lives--;
             points--;
@@ -145,6 +149,7 @@ public class GameController : MonoBehaviour
 
     IEnumerator StartDriving()
     {
+        Debug.Log("wygrales zatrzymuje sie");
         yield return new WaitForSeconds(1f);
         while (gameSpeed < 1f)
         {
@@ -169,7 +174,7 @@ public class GameController : MonoBehaviour
         yield return new WaitForSeconds(1f);
         while (gameSpeed > 0.001f)
         {
-            gameSpeed -= 0.001f * Time.deltaTime;
+            gameSpeed -= 0.5f * Time.deltaTime;
             yield return null;
         }
     }
@@ -178,9 +183,9 @@ public class GameController : MonoBehaviour
     {
         int skokCounter = 0;
         int skokWarunek = Random.Range(12, 17) - (difficulty * 5);
-        while (lives > 0)
+        while (lives > 0 && points < howManyPointsToWin)
         {
-            gameSpeed += 0.01f + (0.005f * difficulty);
+            gameSpeed += 0.008f + (0.004f * difficulty);
             skokCounter++;
             if (skokCounter >= skokWarunek)
             {
@@ -193,7 +198,7 @@ public class GameController : MonoBehaviour
     }
     void Update()
     {
-        if (carAnimRef.GetBool("Driving"))
+        if (carAnimRef.GetBool("Driving") && points < howManyPointsToWin)
         {
             carAnimRef.speed = gameSpeed;
         }

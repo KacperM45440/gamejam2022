@@ -5,13 +5,14 @@ using UnityEngine;
 public class BigBoxScript : MonoBehaviour
 {
     public GameObject boxPrefab;
-    public List<GiraffeScript> giraffes = new List<GiraffeScript>();
+    public GiraffeScript[] giraffes;
 
     private bool finished = false;
     private Animator animatorRef;
     void Start()
     {
         animatorRef = GetComponent<Animator>();
+        giraffes = FindObjectsOfType<GiraffeScript>();
     }
 
     void Update()
@@ -26,7 +27,7 @@ public class BigBoxScript : MonoBehaviour
                     readyGiraffes++;
                 }
             }
-            if (readyGiraffes >= giraffes.Count)
+            if (readyGiraffes >= giraffes.Length)
             {
                 Debug.Log("finished box");
                 foreach (GiraffeScript giraffe in giraffes)
