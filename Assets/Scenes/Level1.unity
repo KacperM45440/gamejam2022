@@ -2680,7 +2680,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5869278941620915292, guid: f54eb9b1450e5c44b87a16e71b4b7533, type: 3}
       propertyPath: bigBoxPrefabs.Array.size
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5869278941620915292, guid: f54eb9b1450e5c44b87a16e71b4b7533, type: 3}
       propertyPath: bigBoxPrefabs.Array.data[1]
@@ -2706,6 +2706,10 @@ PrefabInstance:
       propertyPath: bigBoxPrefabs.Array.data[6]
       value: 
       objectReference: {fileID: 7056942740158732164, guid: c832f0fb7dc72d44a82ba9a24cb6d24e, type: 3}
+    - target: {fileID: 5869278941620915292, guid: f54eb9b1450e5c44b87a16e71b4b7533, type: 3}
+      propertyPath: bigBoxPrefabs.Array.data[7]
+      value: 
+      objectReference: {fileID: 7056942740158732164, guid: 3287707b51b5772439b3d880f2fedb37, type: 3}
     - target: {fileID: 5869278941620915293, guid: f54eb9b1450e5c44b87a16e71b4b7533, type: 3}
       propertyPath: m_RootOrder
       value: 6
