@@ -2675,6 +2675,10 @@ PrefabInstance:
       value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 5869278941620915292, guid: f54eb9b1450e5c44b87a16e71b4b7533, type: 3}
+      propertyPath: howManyPointsToWin
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869278941620915292, guid: f54eb9b1450e5c44b87a16e71b4b7533, type: 3}
       propertyPath: bigBoxPrefabs.Array.size
       value: 7
       objectReference: {fileID: 0}

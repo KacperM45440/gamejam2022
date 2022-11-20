@@ -21,6 +21,10 @@ public class BoxScript : MonoBehaviour
         rbRef = GetComponent<Rigidbody2D>();
 
         gravity = rbRef.gravityScale;
+        if(GameController.Instance.gameSpeed > 0.01f)
+        {
+            startDriving = true;
+        }
     }
 
     void Update()
