@@ -32,6 +32,9 @@ public class GameController : MonoBehaviour
 
     public Animator carAnimRef;
     public TextMeshProUGUI pointsRef;
+    public GameObject life1;
+    public GameObject life2;
+    public GameObject life3;
     public List<GameObject> bigBoxPrefabs = new List<GameObject>();
     public float gameSpeed = 0;
 
@@ -112,12 +115,24 @@ public class GameController : MonoBehaviour
 
     public void LoseLife()
     {
-        if(points < howManyPointsToWin && points >= 0)
+        if(points < howManyPointsToWin && points > 0)
         {
             lives--;
             points--;
+            if (lives == 2)
+            {
+                life1.SetActive(true);
+            }
+            else if (lives == 1)
+            {
+                life2.SetActive(true);
+            }
+            else
+            {
+                life3.SetActive(true);
+            }
             Debug.Log("Lives left" + lives);
-            if (lives <= 0)
+            if (lives == 0)
             {
                 LoseGame();
             }
