@@ -32,17 +32,20 @@ public class GameController : MonoBehaviour
     public Vector2 boxStartPos;
 
     public Animator carAnimRef;
+    public AudioSource carAudioRef;
     public TextMeshProUGUI pointsRef;
     public GameObject life1;
     public GameObject life2;
     public GameObject life3;
     public List<GameObject> bigBoxPrefabs = new List<GameObject>();
     public float gameSpeed = 0;
+    [HideInInspector] public AudioSource audioRef;
 
     private BoxScript[] boxes;
 
     void Start()
     {
+        audioRef = GetComponent<AudioSource>();
         //TYMCZASOWO
         KurtynaController.Instance.transform.position = new Vector2(KurtynaController.Instance.transform.position.x, -0.3f);
         KurtynaController.Instance.OpenCurtains();
