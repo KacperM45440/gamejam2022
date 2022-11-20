@@ -232,7 +232,7 @@ GameObject:
   - component: {fileID: 224751159}
   - component: {fileID: 224751158}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Rekord
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -278,7 +278,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Najwy\u017Cszy wynik :"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a83931c4a16e37c49b88dcb77b6f581f, type: 2}
   m_sharedMaterial: {fileID: 1495507639517409321, guid: a83931c4a16e37c49b88dcb77b6f581f, type: 2}
@@ -312,7 +312,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -341,7 +341,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -308.38428, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1442,6 +1442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1205b082d9c23cb41840573eb9dbcd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  recordText: {fileID: 224751158}
 --- !u!1 &990344254
 GameObject:
   m_ObjectHideFlags: 0

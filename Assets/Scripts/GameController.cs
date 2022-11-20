@@ -184,6 +184,11 @@ public class GameController : MonoBehaviour
     [ContextMenu("Stop")]
     public void CarStop()
     {
+        if(!PlayerPrefs.HasKey("Speed") || PlayerPrefs.GetFloat("Speed") < gameSpeed)
+        {
+            PlayerPrefs.SetFloat("Speed", gameSpeed);
+            PlayerPrefs.Save();
+        }
         gameSpeed = 0;
         carAnimRef.SetBool("Driving", false);
         //foreach (BoxScript box in boxes)
@@ -199,6 +204,13 @@ public class GameController : MonoBehaviour
         {
             gameSpeed -= 0.5f * Time.deltaTime;
             yield return null;
+        }
+        if(lives <= 0)
+        {
+            yield return new WaitForSeconds(2f);
+            KurtynaController.Instance.CloseCurtains();
+            yield return new WaitForSeconds(2f);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
     
@@ -226,5 +238,16 @@ public class GameController : MonoBehaviour
             carAnimRef.speed = gameSpeed;
         }
         pointsRef.text = points + "/" + howManyPointsToWin;
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            StartCoroutine(ExitToMenu());
+        }
+    }
+
+    IEnumerator ExitToMenu()
+    {
+        KurtynaController.Instance.CloseCurtains();
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(0);
     }
 }

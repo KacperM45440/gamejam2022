@@ -1,12 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
+    public TextMeshProUGUI recordText;
+
     void Start()
     {
+        if (PlayerPrefs.HasKey("Speed"))
+        {
+            recordText.text = "Rekordowa predkosc: " + PlayerPrefs.GetFloat("Speed") + " km/h";
+        }
         StartCoroutine(WaitSecond());
     }
 
