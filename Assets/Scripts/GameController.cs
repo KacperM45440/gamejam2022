@@ -41,6 +41,9 @@ public class GameController : MonoBehaviour
     public float gameSpeed = 0;
     [HideInInspector] public AudioSource audioRef;
 
+    public AudioClip carStart;
+    public AudioClip carLoop;
+
     private BoxScript[] boxes;
 
     void Start()
@@ -54,7 +57,9 @@ public class GameController : MonoBehaviour
 
     IEnumerator WaitToStart()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
+        audioRef.PlayOneShot(carStart);
+        yield return new WaitForSeconds(1f);
         StartGame();
     }
 
@@ -171,6 +176,7 @@ public class GameController : MonoBehaviour
         carAnimRef.SetBool("Driving", true);
         StartCoroutine(StartDriving());
         StartCoroutine(PumpUpTheJam());
+        StartCoroutine(CarSound());
     }
 
     IEnumerator StartDriving()
@@ -182,6 +188,14 @@ public class GameController : MonoBehaviour
             gameSpeed += 0.001f * Time.deltaTime;
             yield return null;
         }
+    }
+
+    IEnumerator CarSound()
+    {
+        yield return new WaitForSeconds(2f);
+        audioRef.clip = carLoop;
+        audioRef.loop = true;
+        audioRef.Play();
     }
 
     [ContextMenu("Stop")]
