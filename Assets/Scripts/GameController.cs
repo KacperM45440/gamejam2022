@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class GameController : MonoBehaviour
@@ -29,6 +31,7 @@ public class GameController : MonoBehaviour
     public Vector2 boxStartPos;
 
     public Animator carAnimRef;
+    public TextMeshProUGUI pointsRef;
     public List<GameObject> bigBoxPrefabs = new List<GameObject>();
     public float gameSpeed = 0;
 
@@ -202,5 +205,6 @@ public class GameController : MonoBehaviour
         {
             carAnimRef.speed = gameSpeed;
         }
+        pointsRef.text = points + "/" + howManyPointsToWin;
     }
 }

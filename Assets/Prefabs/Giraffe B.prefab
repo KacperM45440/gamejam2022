@@ -71,7 +71,7 @@ MonoBehaviour:
   isHeld: 0
   isInsideBox: 0
   isColliding: 0
-  rotateSpeed: 15
+  rotateSpeed: 30
 --- !u!95 &141426357801247148
 Animator:
   serializedVersion: 4
