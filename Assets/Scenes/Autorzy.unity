@@ -316,9 +316,20 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Pakuj \u017Cyrafy do skrzynek tak aby wszystkie si\u0119 zmie\u015Bci\u0142y\nU\u017Cywaj
-    Q i E by obraca\u0107 \u017Cyrafami\n\nZbierz 8 skrzynek by przej\u015B\u0107
-    do nast\u0119pnego pozimu\n\nUwaga!\nZgubisz 3 skrzynki- Przegrywasz"
+  m_text: 'Pakuj zyrafy do skrzynek tak aby wszystkie sie zmiescily
+
+    Uzywaj Q
+    i E by obracac zyrafami
+
+
+
+    Utrzymaj 8 skrzynek by przejsc do nastepnego pozioomu
+
+
+    Uwaga!
+
+    Zgubisz
+    3 skrzynki - Przegrywasz'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a83931c4a16e37c49b88dcb77b6f581f, type: 2}
   m_sharedMaterial: {fileID: 1495507639517409321, guid: a83931c4a16e37c49b88dcb77b6f581f, type: 2}
@@ -359,7 +370,7 @@ MonoBehaviour:
   m_wordSpacing: 0
   m_lineSpacing: 16
   m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
+  m_paragraphSpacing: -2.79
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
