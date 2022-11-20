@@ -6,15 +6,24 @@ using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
+    public AudioClip menuClick;
+
     public TextMeshProUGUI recordText;
+    private AudioSource audioRef;
 
     void Start()
     {
+        audioRef = GetComponent<AudioSource>();
         if (PlayerPrefs.HasKey("Speed"))
         {
             recordText.text = "Rekordowa predkosc: " + PlayerPrefs.GetFloat("Speed") + " km/h";
         }
         StartCoroutine(WaitSecond());
+    }
+
+    public void PlayClick()
+    {
+        audioRef.PlayOneShot(menuClick);
     }
 
     IEnumerator WaitSecond()
