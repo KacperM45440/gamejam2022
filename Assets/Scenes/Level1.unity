@@ -2672,14 +2672,6 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5869278941620915292, guid: f54eb9b1450e5c44b87a16e71b4b7533, type: 3}
-      propertyPath: carLoop
-      value: 
-      objectReference: {fileID: 8300000, guid: 25fc4c239c510af44bc9a11d5343757a, type: 3}
-    - target: {fileID: 5869278941620915292, guid: f54eb9b1450e5c44b87a16e71b4b7533, type: 3}
-      propertyPath: carStart
-      value: 
-      objectReference: {fileID: 8300000, guid: 79349dba92c6fe542bece4d2cbae98c7, type: 3}
-    - target: {fileID: 5869278941620915292, guid: f54eb9b1450e5c44b87a16e71b4b7533, type: 3}
       propertyPath: pointsRef
       value: 
       objectReference: {fileID: 163938010}

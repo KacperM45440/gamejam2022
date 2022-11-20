@@ -43,6 +43,10 @@ public class GameController : MonoBehaviour
 
     public AudioClip carStart;
     public AudioClip carLoop;
+    public AudioClip boxLost;
+    public AudioClip boxCompleted;
+    public AudioClip wonGame;
+    public AudioClip lostGame;
 
     private BoxScript[] boxes;
 
@@ -90,7 +94,8 @@ public class GameController : MonoBehaviour
 
     public void BoxCompleted()
     {
-        if(lives > 0)
+        audioRef.PlayOneShot(boxCompleted);
+        if (lives > 0)
         {
             points++;
             if(points >= howManyPointsToWin)
@@ -108,6 +113,7 @@ public class GameController : MonoBehaviour
     {
         StartCoroutine(StopDriving());
         StartCoroutine(DriveOff());
+        audioRef.PlayOneShot(wonGame);
     }
 
     IEnumerator DriveOff()
@@ -132,6 +138,7 @@ public class GameController : MonoBehaviour
         {
             lives--;
             points--;
+            audioRef.PlayOneShot(boxLost);
             if (lives == 2)
             {
                 life1.SetActive(true);
@@ -162,6 +169,7 @@ public class GameController : MonoBehaviour
         }
         Destroy(FindObjectOfType<BigBoxScript>().gameObject);
         CarStop();
+        audioRef.PlayOneShot(lostGame);
         Debug.Log("You lost");
     }
 
@@ -213,6 +221,7 @@ public class GameController : MonoBehaviour
         //    box.startDriving = false;
         //}
         StartCoroutine(StopDriving());
+        audioRef.Stop();
     }
     IEnumerator StopDriving()
     {
