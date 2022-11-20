@@ -23,7 +23,9 @@ public class GameController : MonoBehaviour
     }
 
     public int lives = 3;
-    public int points = 0;
+    public int points = 3;
+    public int howManyPointsToWin = 8;
+    public int difficulty = 0;
 
     public Animator carAnimRef;
     public List<GameObject> bigBoxPrefabs = new List<GameObject>();
@@ -34,8 +36,17 @@ public class GameController : MonoBehaviour
     void Start()
     {
         //TYMCZASOWO
+        KurtynaController.Instance.transform.position = new Vector2(KurtynaController.Instance.transform.position.x, -0.3f);
+        KurtynaController.Instance.OpenCurtains();
+        StartCoroutine(WaitToStart());
+    }
+
+    IEnumerator WaitToStart()
+    {
+        yield return new WaitForSeconds(3f);
         StartGame();
     }
+
 
     [ContextMenu("StartGame")]
     public void StartGame()
@@ -63,8 +74,27 @@ public class GameController : MonoBehaviour
         if(lives > 0)
         {
             points++;
-            StartCoroutine(NewBigBox());
+            if(points >= howManyPointsToWin)
+            {
+                WinLevel();
+            }
+            else
+            {
+                StartCoroutine(NewBigBox());
+            }
         }
+    }
+
+    public void WinLevel()
+    {
+        StartCoroutine(DriveOff());
+        StartCoroutine(StopDriving());
+    }
+
+    IEnumerator DriveOff()
+    {
+        yield return new WaitForSeconds(3f);
+        carAnimRef.SetTrigger("DriveOff");
     }
 
     IEnumerator NewBigBox()
@@ -75,16 +105,27 @@ public class GameController : MonoBehaviour
 
     public void LoseLife()
     {
-        lives--;
-        Debug.Log("Lives left" + lives);
-        if(lives <= 0)
+        if(points < howManyPointsToWin)
         {
-            LoseGame();
+            lives--;
+            points--;
+            Debug.Log("Lives left" + lives);
+            if (lives <= 0)
+            {
+                LoseGame();
+            }
         }
     }
 
     public void LoseGame()
     {
+        Destroy(FindObjectOfType<BigBoxScript>().gameObject);
+        GiraffeScript[] giraffes = FindObjectsOfType<GiraffeScript>();
+        foreach(GiraffeScript g in giraffes)
+        {
+            Destroy(g.gameObject);
+        }
+        Destroy(FindObjectOfType<BigBoxScript>().gameObject);
         CarStop();
         Debug.Log("You lost");
     }
@@ -136,16 +177,16 @@ public class GameController : MonoBehaviour
     IEnumerator PumpUpTheJam()
     {
         int skokCounter = 0;
-        int skokWarunek = Random.Range(12, 17);
+        int skokWarunek = Random.Range(12, 17) - (difficulty * 5);
         while (lives > 0)
         {
-            gameSpeed += 0.01f;
+            gameSpeed += 0.01f + (0.005f * difficulty);
             skokCounter++;
             if (skokCounter >= skokWarunek)
             {
                 CarJump();
                 skokCounter = 0;
-                skokWarunek = Random.Range(12, 17);
+                skokWarunek = Random.Range(12, 17) - (difficulty * 5);
             }
             yield return new WaitForSeconds(1f);
         }

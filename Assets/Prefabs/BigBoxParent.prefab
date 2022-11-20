@@ -112,7 +112,7 @@ PrefabInstance:
     - target: {fileID: 1760023241684202068, guid: 6f043b1ace8304f43a420e008a5d45f8, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: cc3884b79f9f21849a3546ee026c966d, type: 3}
+      objectReference: {fileID: 21300000, guid: 4b95627d78b24d647969539e8b2b77b0, type: 3}
     - target: {fileID: 3042700116488980839, guid: 6f043b1ace8304f43a420e008a5d45f8, type: 3}
       propertyPath: m_Name
       value: Big Box
