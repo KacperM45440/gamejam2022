@@ -1,5 +1,6 @@
 # Żyrafki do paczki
 Gra komputerowa stworzona na potrzeby gamejamu HackYeah w Krakowie. Stworzona w silniku Unity, napisana w C#.
+![image](https://user-images.githubusercontent.com/104095161/233800744-b9b59d50-40a4-44f8-bc84-cf8ca7d88312.png)
 
 # Dlaczego ten projekt powstał?
 W ramach rozrywki oraz wyzwania udaliśmy się w czteroosobowej grupie znajomych na event programistyczny "HackYeah" w weekend 20 listopada 2022. Jego zadaniem było utworzyć w 48 godzin grę komputerową na temat, który ujawniony został uczestnikom dopiero na miejscu. Ta gra jest efektem tych właśnie starań.
